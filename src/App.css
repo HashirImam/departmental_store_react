@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(73,79,82);
+  color: white;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+section {
+  padding: 3%;
+ 
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  background-color: transparent;
+  height: 300px;
+  perspective: 1000px;
+  border: solid;
+}
+
+.card ul {
+  padding: 0;
+}
+
+.card li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.item-details h2 {
+  text-align: center;
+}
+
+.item-details ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 0;
+}
+
+.pay-container {
+  border: 1px solid beige;
+    padding: 0 10px;
+    width: 320px;
+    box-sizing: border-box;
+    margin: 2px;
+    background-color: beige;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    font-size: large;
+    z-index: 1;
+    left: 39%;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
