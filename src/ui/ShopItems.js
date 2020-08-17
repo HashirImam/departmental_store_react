@@ -1,38 +1,43 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../App.css'
-import ItemDetail from './ItemDetail'
 import { Link } from 'react-router-dom'
 
-class ShopItems extends Component  {
 
-    render() {
-    return (
-        
-     this.props.items.map((item) => (
-        <div className = 'card'>
-            <div className = 'card-inner'>
-                <ul>
-                    <li>
-                    <strong>Item Name: </strong><Link to={`/shop/${item.id}`}>{item.name}</Link>
-                    </li>
-                    <li>
-                        <button onClick={this.props.increment.bind(this,item.id)}>+</button>
-                    </li>
-                    <li>
-                        {item.count}
-                    </li>
-                    <li>
-                        <button onClick={this.props.decrement.bind(this,item.id)}>-</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    ))
+ const ShopItems = (props) =>  {
     
-   
-    ) 
-     
-}
-}
 
-export default ShopItems
+        
+    return (
+            props.items.map(item => (
+                <div className = 'card'>
+
+                            <h1>
+                             <Link to = {`/shop/${item.id}`} key = {item.id}>{item.name}</Link>
+                            </h1>
+                             <div className='item-pic'></div>
+                            
+                             <button onClick={() => props.increment(item.id)}> + </button>
+                         
+                             {item.count}
+                         
+                             <button onClick={() => props.decrement(item.id)}> - </button>
+                         
+                    </div>
+                    
+            ))
+    )
+};
+
+
+
+
+
+export default  ShopItems
+
+
+
+
+
+
+
+

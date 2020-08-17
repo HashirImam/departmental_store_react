@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: #7ed6df;
 }
 
 nav {
@@ -19,36 +20,36 @@ nav {
   list-style: none;
 }
 
-section {
-  padding: 3%;
- 
-}
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 3% 0 3% 3%;
+  margin-left: 5%;
+  
 }
 
-a {
+section a {
   text-decoration: none;
 }
 
 .card {
-  background-color: transparent;
+  background: #ecedef;
   height: 300px;
+  max-width: 300px;
   perspective: 1000px;
-  border: solid;
+  text-transform: uppercase;
 }
 
-.card ul {
+/* .card ul {
   padding: 0;
 }
 
 .card li {
   list-style: none;
   padding-bottom: 10px;
-}
+} */
 
 .item-details h2 {
   text-align: center;

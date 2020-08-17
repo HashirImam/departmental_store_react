@@ -5,9 +5,12 @@ import Shop from './ui/Shop';
 import ItemDetail from './ui/ItemDetail'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './ui/Home';
+import { Provider } from 'react-redux';
+import store from './ui/redux/store';
 
 function App() {
   return (
+    <Provider store = {store}>
     <Router>
     <div className="App">
       <Nav />
@@ -19,6 +22,7 @@ function App() {
      
     </div>
     </Router>
+    </Provider>
     
   );
 }
