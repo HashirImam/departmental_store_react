@@ -32,6 +32,7 @@ nav {
 
 section a {
   text-decoration: none;
+  color: rgb(38, 51, 51);
 }
 
 .card {
@@ -42,6 +43,29 @@ section a {
   text-transform: uppercase;
 }
 
+.card h1 {
+  font-size: 15px;
+}
+
+.fas {
+  font-size: 50px;
+}
+
+.btns{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30%;
+
+}
+
+.btn-plus, .btn-minus {
+  width: 60px;
+  border-radius: 20px;
+  border: 2px solid;
+  color: #7ed6df;
+  font-weight: bolder;
+}
 /* .card ul {
   padding: 0;
 }

@@ -14,14 +14,13 @@ import { Link } from 'react-router-dom'
                             <h1>
                              <Link to = {`/shop/${item.id}`} key = {item.id}>{item.name}</Link>
                             </h1>
-                             <div className='item-pic'></div>
-                            
-                             <button onClick={() => props.increment(item.id)}> + </button>
+                            <i className='fas fa-gift'></i><br/><br/>
+                            <strong>Item Count: </strong>{item.count}
+                            <div className='btns'>
+                             <button className='btn-plus' onClick={() => props.increment(item.id)}>   +   </button>
                          
-                             {item.count}
-                         
-                             <button onClick={() => props.decrement(item.id)}> - </button>
-                         
+                             <button className='btn-minus' onClick={() => props.decrement(item.id)}> - </button>
+                            </div>
                     </div>
                     
             ))
